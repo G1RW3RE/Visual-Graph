@@ -1,5 +1,6 @@
 package graph;
 
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
 public class Vertex {
 
     public Elem data;
-    public List<Vertex> edges;
+    public Deque<Vertex> edges;
 
     public Vertex(Elem elem) {
         this.data = elem;

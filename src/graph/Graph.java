@@ -20,4 +20,8 @@ public class Graph {
         }
     }
 
+    public int getSize() {
+        return vertexes.size();
+    }
+
 }
