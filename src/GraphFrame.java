@@ -1,3 +1,5 @@
+import graph.Elem;
+
 import javax.swing.*;
 
 /**
@@ -19,7 +21,21 @@ public class GraphFrame extends JFrame {
         setVisible(true);
     }
 
-    private void initializeComponents() {
+    private GraphPanel graphPanel;
 
+    private void initializeComponents() {
+        graphPanel = new GraphPanel();
+        graphPanel.createGraph(new Elem[]{
+                new Elem(5, "Jiujiang"),
+                new Elem(4, "Wuhan"),
+                new Elem(6, "Beijing"),
+                new Elem(19, "Xi'an")
+        },
+        new int[][]{
+                {5, 4},
+                {5, 6}
+        });
+        graphPanel.destroyGraph();
+        setContentPane(graphPanel);
     }
 }

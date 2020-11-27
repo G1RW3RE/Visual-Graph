@@ -18,7 +18,7 @@ public class Vertex {
     }
 
     public void linkTo(Vertex other) {
-        if(other != null) {
+        if(other != null && !this.edges.contains(other)) {
             this.edges.add(other);
             other.edges.add(this);
         }
@@ -28,6 +28,15 @@ public class Vertex {
         if(other != null) {
             this.edges.remove(other);
             other.edges.remove(this);
+        }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof Vertex) {
+            return data.equals(((Vertex) obj).data);
+        } else {
+            return false;
         }
     }
 }
