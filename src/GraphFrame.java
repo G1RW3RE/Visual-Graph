@@ -13,7 +13,7 @@ public class GraphFrame extends JFrame {
 
     public GraphFrame() {
         super("图测试");
-        setSize(1080, 720);
+        setSize(1080, 820);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setResizable(true);
@@ -29,13 +29,15 @@ public class GraphFrame extends JFrame {
                 new Elem(5, "Jiujiang"),
                 new Elem(4, "Wuhan"),
                 new Elem(6, "Beijing"),
-                new Elem(19, "Xi'an")
+                new Elem(19, "Xi'an"),
+                new Elem(21, "Guangzhou")
         },
         new int[][]{
                 {5, 4},
-                {5, 6}
+                {5, 6},
+                {5, 19},
+                {21, 19}
         });
-        graphPanel.destroyGraph();
         setContentPane(graphPanel);
     }
 }
